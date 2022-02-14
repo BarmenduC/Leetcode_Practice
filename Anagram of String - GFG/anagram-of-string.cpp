@@ -38,7 +38,7 @@ int i,a[26]={0},b[26]={0},res=0;
        b[x]++;
    }
    for(i=0; i<26; i++){
-       if(a[i] and b[i])res+=abs(a[i]-b[i]);
+       if(a[i] && b[i])res+=abs(a[i]-b[i]);
        else res+=a[i]+b[i];
    }
    
