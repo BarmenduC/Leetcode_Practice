@@ -1,0 +1,28 @@
+class Solution {
+public:
+    int numberOfArithmeticSlices(vector<int>& nums) {
+        int n = nums.size();
+        if(n < 3){
+            return 0;
+        }
+        
+        int ans = 0;
+        
+        for(int i = 0; i < n - 2; i++){
+            int dif = nums[i+1] - nums[i];
+            for(int j = i + 2; j < n; j++){
+                cout << i << " " << j << " " << dif << endl;
+                
+                if(nums[j] - nums[j - 1] == dif){
+                    cout << "yes" << endl;
+                    ans = ans + 1;
+                } else {
+                    break;
+                }                
+            }
+        }
+        
+        
+        return ans;
+    }
+};
